@@ -18,7 +18,7 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
     
     init() {}
     
-    func execute(completion: @escaping ([TransactionCategory]?, Error?) -> Void) {
+    func getTransactions(completion: @escaping ([TransactionCategory]?, Error?) -> Void) {
         var transactionCategoryList = [TransactionCategory]()
         
         let transactioCash = TransactionCategory(name: "Cash", transactions: transactionCash)

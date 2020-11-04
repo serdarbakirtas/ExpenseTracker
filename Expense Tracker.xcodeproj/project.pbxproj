@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F033A772553359B006C1FF3 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A762553359B006C1FF3 /* ChartViewController.swift */; };
 		9FB96C0E25530120000536E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C0D25530120000536E3 /* AppDelegate.swift */; };
 		9FB96C1525530120000536E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1325530120000536E3 /* Main.storyboard */; };
 		9FB96C1725530121000536E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1625530121000536E3 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F033A762553359B006C1FF3 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		9FB96C0A25530120000536E3 /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB96C0D25530120000536E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB96C1425530120000536E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F033A7525533590006C1FF3 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				9F033A762553359B006C1FF3 /* ChartViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		9FB96C0125530120000536E3 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB96CA32553193C000536E3 /* AddTransaction */,
+				9F033A7525533590006C1FF3 /* Chart */,
 				9FB96CA225531923000536E3 /* Dashboard */,
 			);
 			path = Views;
@@ -381,6 +392,7 @@
 				9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */,
 				9FB96C45255301C4000536E3 /* TabBarController.swift in Sources */,
 				9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */,
+				9F033A772553359B006C1FF3 /* ChartViewController.swift in Sources */,
 				9FB96C5625530295000536E3 /* DashboardPresenter.swift in Sources */,
 				9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */,
 				9FB96CA52553194C000536E3 /* AddTransactionViewControlller.swift in Sources */,

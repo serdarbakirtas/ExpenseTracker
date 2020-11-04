@@ -60,8 +60,8 @@ class AddTransactionLayoutView: UIView {
     }()
     
     lazy var toolbarPicker: UIToolbar = {
-        let toolbar = UIToolbar()
-        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 35))
+        toolbar.translatesAutoresizingMaskIntoConstraints = true
         let doneButton = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(onSelectPicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(onCancelPicker))
@@ -77,17 +77,9 @@ class AddTransactionLayoutView: UIView {
         
         accountPickerView.configurePickerView(items: accounts)
         categoryPickerView.configurePickerView(items: BalanceType.INCOME.category)
-        accountTextField.inputView = accountPickerView
-        categoryTextField.inputView = categoryPickerView
-        accountTextField.inputAccessoryView = toolbarPicker
-        categoryTextField.inputAccessoryView = toolbarPicker
         
-        accountTextField.delegate = self
-        categoryTextField.delegate = self
-        amountTextField.delegate = self
-        categoryPickerView.pickerViewDelegate = self
-        accountPickerView.pickerViewDelegate = self
-        
+        configureInputData()
+        configureDelegate()
         addSegmentControls()
     }
     
@@ -113,7 +105,22 @@ class AddTransactionLayoutView: UIView {
     }
     
     // MARK: FUNCTIONS
-    func addSubViews() {
+    private func configureDelegate() {
+        accountTextField.delegate = self
+        categoryTextField.delegate = self
+        amountTextField.delegate = self
+        categoryPickerView.pickerViewDelegate = self
+        accountPickerView.pickerViewDelegate = self
+    }
+    
+    private func configureInputData() {
+        accountTextField.inputView = accountPickerView
+        categoryTextField.inputView = categoryPickerView
+        accountTextField.inputAccessoryView = toolbarPicker
+        categoryTextField.inputAccessoryView = toolbarPicker
+    }
+    
+    private func addSubViews() {
         addSubview(transactionSegmentControl)
         addSubview(transactionStackView)
         

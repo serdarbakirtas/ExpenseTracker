@@ -7,7 +7,7 @@
 
 protocol ExpenseTrackerData {
     // MARK: GET
-    func execute(completion: @escaping ([TransactionCategory]?, Error?) -> Void)
+    func getTransactions(completion: @escaping ([TransactionCategory]?, Error?) -> Void)
     
     // MARK: POST
     func addTransactionCashe(transaction: Transaction)

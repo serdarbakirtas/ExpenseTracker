@@ -19,17 +19,17 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
+        setupView()
     }
     
-    func setupView() {
+    private func setupView() {
         tabBar.barTintColor = .white
         tabBar.isTranslucent = true
         tabBar.tintColor = .black
 
         let navigationController = UINavigationController()
         
-        let chartVC = UIViewController()
+        let chartVC = ChartViewController()
         let dashboardVC = DashboardViewController()
         
         navigationController.viewControllers.append(dashboardVC)

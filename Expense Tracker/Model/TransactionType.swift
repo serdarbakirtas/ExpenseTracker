@@ -18,7 +18,6 @@ enum TransactionType: CaseIterable {
     }
 }
 
-
 extension AccoutType {
     
     static func getType(for stringValue: String) -> AccoutType {

@@ -14,6 +14,7 @@ class AddTransactionPresenter<T: AddTransactionView>: BasePresenter<T> {
         super.init(view: view, dataInstance: dataInstance)
     }
     
+    // MARK: FUNCTIONS
     func addTransaction(amount: String, category: String, account: String, balanceType: BalanceType) {
         if !(amount.isEmpty) && !(category.isEmpty) && !(account.isEmpty) {
             let category = Category(rawValue: category)

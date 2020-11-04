@@ -19,7 +19,8 @@ struct TransactionListViewModel {
         amount = getTransactionAmmount(items: items)
         transactions = getTransactions(items: items)
     }
-        
+    
+    // MARK: FUNCTIONS
     func getTransactionName(items: TransactionCategory) -> String {
         return items.name
     }

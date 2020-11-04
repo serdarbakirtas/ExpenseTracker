@@ -18,6 +18,7 @@ class DashboardViewController: BaseViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         tableView.register(TransactionCell.self, forCellReuseIdentifier: "transactionCell")
         return tableView
     }()

@@ -66,6 +66,7 @@ class DashboardHeaderView: UITableViewHeaderFooterView {
             views: views))
     }
     
+    // MARK: FUNCTIONS
     func populate(transaction: TransactionListViewModel) {
         nameLabel.text = transaction.name
         amountLabel.text = " \(transaction.amount ?? 0)".toCurrency

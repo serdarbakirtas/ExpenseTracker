@@ -29,9 +29,9 @@ class DashboardPresenter<T: OffersView>: BasePresenter<T> {
         return TransactionListViewModel(from: transaction)
     }
     
-    // MARK: REPO CALLS
+    // MARK: DATA CALLS
     func loadTransaction() {
-        dataInstance.execute {[unowned self] (transactions, error) in
+        dataInstance.getTransactions {[unowned self] (transactions, error) in
             if let error = error {
                 DispatchQueue.main.async {
                     self.interpretError(title: "Loading Error", error: error)

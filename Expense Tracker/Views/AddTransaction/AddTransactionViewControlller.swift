@@ -16,7 +16,7 @@ class AddTransactionViewControlller: BaseViewController {
         let layoutView = AddTransactionLayoutView()
         layoutView.translatesAutoresizingMaskIntoConstraints = false
         layoutView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    return layoutView
+        return layoutView
     }()
     
     // MARK: PROPERTIES

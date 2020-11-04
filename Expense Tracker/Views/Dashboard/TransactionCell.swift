@@ -66,6 +66,7 @@ class TransactionCell: UITableViewCell {
             views: views))
     }
     
+    // MARK: FUNCTIONS
     func populate(transaction: Transaction) {
         if transaction.amount < 0 {
             amountLabel.textColor = .red
