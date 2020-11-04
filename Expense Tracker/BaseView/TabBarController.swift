@@ -34,8 +34,8 @@ class TabBarController: UITabBarController {
         
         navigationController.viewControllers.append(dashboardVC)
         
-        dashboardVC.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "text.justify"), tag: 0)
-        chartVC.tabBarItem = UITabBarItem(title: "Chart", image: UIImage(systemName: "chart.bar.fill"), tag: 1)
+        dashboardVC.tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(named: "icon_add"), tag: 0)
+        chartVC.tabBarItem = UITabBarItem(title: "Chart", image: UIImage(named: "icon_dashboard"), tag: 1)
         self.viewControllers = [navigationController, chartVC]
     }
 }

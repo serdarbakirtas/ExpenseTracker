@@ -18,6 +18,7 @@ class DashboardViewController: BaseViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
+        tableView.register(TransactionCell.self, forCellReuseIdentifier: "transactionCell")
         return tableView
     }()
     
@@ -59,7 +60,10 @@ class DashboardViewController: BaseViewController {
     }
     
     // MARK: ACTIONS
-    @objc private func onTapAddTransaction() {}
+    @objc private func onTapAddTransaction() {
+        let addTransactionVC = AddTransactionViewControlller()
+        presentVC(viewController: addTransactionVC)
+    }
 }
 
 extension DashboardViewController: OffersView {
@@ -80,7 +84,12 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transactionCell", for: indexPath) as! TransactionCell
+        let transactionViewModel = presenter.getTransactionListViewModel(index: indexPath.section)
+        if let transaction = transactionViewModel.transactions?[indexPath.row] {
+            cell.populate(transaction: transaction)
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

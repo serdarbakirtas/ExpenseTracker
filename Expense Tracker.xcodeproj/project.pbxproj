@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9FB96C0E25530120000536E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C0D25530120000536E3 /* AppDelegate.swift */; };
-		9FB96C1025530120000536E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C0F25530120000536E3 /* SceneDelegate.swift */; };
 		9FB96C1525530120000536E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1325530120000536E3 /* Main.storyboard */; };
 		9FB96C1725530121000536E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1625530121000536E3 /* Assets.xcassets */; };
 		9FB96C1A25530121000536E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1825530121000536E3 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,14 @@
 		9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C7C2553072F000536E3 /* TransactionCategory.swift */; };
 		9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */; };
 		9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */; };
+		9FB96CA52553194C000536E3 /* AddTransactionViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CA42553194C000536E3 /* AddTransactionViewControlller.swift */; };
+		9FB96CAA25531958000536E3 /* AddTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CA925531958000536E3 /* AddTransactionPresenter.swift */; };
+		9FB96CAF25531965000536E3 /* AddTransactionLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CAE25531965000536E3 /* AddTransactionLayoutView.swift */; };
+		9FB96CB425531BC7000536E3 /* BasePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CB325531BC7000536E3 /* BasePickerView.swift */; };
+		9FB96CB925531C0C000536E3 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CB825531C0C000536E3 /* BaseTextField.swift */; };
+		9FB96CBE25531C9C000536E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CBD25531C9C000536E3 /* TransactionCell.swift */; };
+		9FB96CCF255323EA000536E3 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CCE255323EA000536E3 /* TransactionType.swift */; };
+		9FB96CD425532471000536E3 /* BalanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CD325532471000536E3 /* BalanceType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +54,6 @@
 /* Begin PBXFileReference section */
 		9FB96C0A25530120000536E3 /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB96C0D25530120000536E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FB96C0F25530120000536E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9FB96C1425530120000536E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FB96C1625530121000536E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FB96C1925530121000536E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 		9FB96C7C2553072F000536E3 /* TransactionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCategory.swift; sourceTree = "<group>"; };
 		9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
 		9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		9FB96CA42553194C000536E3 /* AddTransactionViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewControlller.swift; sourceTree = "<group>"; };
+		9FB96CA925531958000536E3 /* AddTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionPresenter.swift; sourceTree = "<group>"; };
+		9FB96CAE25531965000536E3 /* AddTransactionLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionLayoutView.swift; sourceTree = "<group>"; };
+		9FB96CB325531BC7000536E3 /* BasePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerView.swift; sourceTree = "<group>"; };
+		9FB96CB825531C0C000536E3 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		9FB96CBD25531C9C000536E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		9FB96CCE255323EA000536E3 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		9FB96CD325532471000536E3 /* BalanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +140,6 @@
 				9FB96C4C25530274000536E3 /* Views */,
 				9FB96C8425530765000536E3 /* ViewModel */,
 				9FB96C0D25530120000536E3 /* AppDelegate.swift */,
-				9FB96C0F25530120000536E3 /* SceneDelegate.swift */,
 				9FB96C1325530120000536E3 /* Main.storyboard */,
 				9FB96C1625530121000536E3 /* Assets.xcassets */,
 				9FB96C1825530121000536E3 /* LaunchScreen.storyboard */,
@@ -157,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				9FB96C44255301C4000536E3 /* TabBarController.swift */,
+				9FB96CB325531BC7000536E3 /* BasePickerView.swift */,
+				9FB96CB825531C0C000536E3 /* BaseTextField.swift */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -164,9 +179,8 @@
 		9FB96C4C25530274000536E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9FB96C4D25530289000536E3 /* DashboardViewController.swift */,
-				9FB96C5525530295000536E3 /* DashboardPresenter.swift */,
-				9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */,
+				9FB96CA32553193C000536E3 /* AddTransaction */,
+				9FB96CA225531923000536E3 /* Dashboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				9FB96C7C2553072F000536E3 /* TransactionCategory.swift */,
+				9FB96CCE255323EA000536E3 /* TransactionType.swift */,
+				9FB96CD325532471000536E3 /* BalanceType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +220,27 @@
 				9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9FB96CA225531923000536E3 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9FB96C4D25530289000536E3 /* DashboardViewController.swift */,
+				9FB96C5525530295000536E3 /* DashboardPresenter.swift */,
+				9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */,
+				9FB96CBD25531C9C000536E3 /* TransactionCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		9FB96CA32553193C000536E3 /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				9FB96CA42553194C000536E3 /* AddTransactionViewControlller.swift */,
+				9FB96CA925531958000536E3 /* AddTransactionPresenter.swift */,
+				9FB96CAE25531965000536E3 /* AddTransactionLayoutView.swift */,
+			);
+			path = AddTransaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,17 +373,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB96CD425532471000536E3 /* BalanceType.swift in Sources */,
 				9FB96C69255302D2000536E3 /* BaseViewPresenter.swift in Sources */,
+				9FB96CB425531BC7000536E3 /* BasePickerView.swift in Sources */,
+				9FB96CAF25531965000536E3 /* AddTransactionLayoutView.swift in Sources */,
+				9FB96CBE25531C9C000536E3 /* TransactionCell.swift in Sources */,
 				9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */,
 				9FB96C45255301C4000536E3 /* TabBarController.swift in Sources */,
 				9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */,
 				9FB96C5625530295000536E3 /* DashboardPresenter.swift in Sources */,
 				9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */,
+				9FB96CA52553194C000536E3 /* AddTransactionViewControlller.swift in Sources */,
 				9FB96C772553050A000536E3 /* ExpenseTrackerDataRepo.swift in Sources */,
+				9FB96CAA25531958000536E3 /* AddTransactionPresenter.swift in Sources */,
 				9FB96C5B255302A8000536E3 /* BasePresenterView.swift in Sources */,
+				9FB96CCF255323EA000536E3 /* TransactionType.swift in Sources */,
+				9FB96CB925531C0C000536E3 /* BaseTextField.swift in Sources */,
 				9FB96C6F255304F5000536E3 /* ExpenseTrackerData.swift in Sources */,
 				9FB96C0E25530120000536E3 /* AppDelegate.swift in Sources */,
-				9FB96C1025530120000536E3 /* SceneDelegate.swift in Sources */,
 				9FB96C61255302C8000536E3 /* BaseViewController.swift in Sources */,
 				9FB96C4E25530289000536E3 /* DashboardViewController.swift in Sources */,
 			);
@@ -454,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -509,7 +553,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

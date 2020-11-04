@@ -31,4 +31,16 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
         
         completion(transactionCategoryList, nil)
     }
+    
+    func addTransactionCashe(transaction: Transaction) {
+        transactionCash.append(transaction)
+    }
+    
+    func addTransactionCrediatCard(transaction: Transaction) {
+        transactionCrediatCard.append(transaction)
+    }
+    
+    func addTransactionBankAccount(transaction: Transaction) {
+        transactionBankAccount.append(transaction)
+    }
 }
