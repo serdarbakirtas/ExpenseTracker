@@ -14,9 +14,11 @@ protocol BasePresenterView: class {
 class BasePresenter<T: BasePresenterView> {
     
     weak var view: T?
+    var dataInstance: ExpenseTrackerData
     
-    init(view: T) {
+    init(view: T, dataInstance: ExpenseTrackerData = ExpenseTrackerDataRepo.sharedInstance) {
         self.view = view
+        self.dataInstance = dataInstance
     }
     
     func interpretError(title: String?, error: Error, actions: [UIAlertAction]? = nil) {

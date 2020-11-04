@@ -20,6 +20,8 @@
 		9FB96C5B255302A8000536E3 /* BasePresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C5A255302A8000536E3 /* BasePresenterView.swift */; };
 		9FB96C61255302C8000536E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C60255302C8000536E3 /* BaseViewController.swift */; };
 		9FB96C69255302D2000536E3 /* BaseViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C68255302D2000536E3 /* BaseViewPresenter.swift */; };
+		9FB96C6F255304F5000536E3 /* ExpenseTrackerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C6E255304F5000536E3 /* ExpenseTrackerData.swift */; };
+		9FB96C772553050A000536E3 /* ExpenseTrackerDataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		9FB96C5A255302A8000536E3 /* BasePresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterView.swift; sourceTree = "<group>"; };
 		9FB96C60255302C8000536E3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9FB96C68255302D2000536E3 /* BaseViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewPresenter.swift; sourceTree = "<group>"; };
+		9FB96C6E255304F5000536E3 /* ExpenseTrackerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerData.swift; sourceTree = "<group>"; };
+		9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerDataRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				9FB96C5F255302B6000536E3 /* Base */,
 				9FB96C43255301B6000536E3 /* BaseView */,
+				9FB96C6D255304E3000536E3 /* Data */,
 				9FB96C4C25530274000536E3 /* Views */,
 				9FB96C0D25530120000536E3 /* AppDelegate.swift */,
 				9FB96C0F25530120000536E3 /* SceneDelegate.swift */,
@@ -165,6 +170,15 @@
 				9FB96C68255302D2000536E3 /* BaseViewPresenter.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9FB96C6D255304E3000536E3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9FB96C6E255304F5000536E3 /* ExpenseTrackerData.swift */,
+				9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +314,9 @@
 				9FB96C69255302D2000536E3 /* BaseViewPresenter.swift in Sources */,
 				9FB96C45255301C4000536E3 /* TabBarController.swift in Sources */,
 				9FB96C5625530295000536E3 /* DashboardPresenter.swift in Sources */,
+				9FB96C772553050A000536E3 /* ExpenseTrackerDataRepo.swift in Sources */,
 				9FB96C5B255302A8000536E3 /* BasePresenterView.swift in Sources */,
+				9FB96C6F255304F5000536E3 /* ExpenseTrackerData.swift in Sources */,
 				9FB96C0E25530120000536E3 /* AppDelegate.swift in Sources */,
 				9FB96C1025530120000536E3 /* SceneDelegate.swift in Sources */,
 				9FB96C61255302C8000536E3 /* BaseViewController.swift in Sources */,
