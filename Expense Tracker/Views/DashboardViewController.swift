@@ -7,9 +7,19 @@
 
 import UIKit
 
-protocol OffersView: BaseView {}
+protocol OffersView: BaseView {
+    func reloadTable()
+}
 
 class DashboardViewController: BaseViewController {
+    
+    // MARK: UI
+    var transactionTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
+        return tableView
+    }()
     
     // MARK: PROPERTIES
     var presenter: DashboardPresenter<DashboardViewController>!
@@ -19,11 +29,71 @@ class DashboardViewController: BaseViewController {
         
         title = "Dashboard"
         
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onTapAddTransaction))
+        navigationItem.setRightBarButton(addButton, animated: false)
+        
+        addSubviews()
+        transactionTableView.dataSource = self
+        transactionTableView.delegate = self
+        
         presenter = DashboardPresenter(view: self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.loadTransaction()
+        reloadTable()
+    }
+    
+    // MARK: FUNCTIONS
+    private func addSubviews() {
+        view.addSubview(transactionTableView)
+        
+        NSLayoutConstraint.activate([
+            transactionTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            transactionTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            transactionTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            transactionTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+        ])
+    }
+    
+    // MARK: ACTIONS
+    @objc private func onTapAddTransaction() {}
 }
 
 extension DashboardViewController: OffersView {
     
-    func reloadTable() {}
+    func reloadTable() {
+        transactionTableView.reloadData()
+    }
+}
+
+extension DashboardViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        presenter.getTransactionCategorySectionCount()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.getTransactionsCount(section: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = DashboardHeaderView(frame: tableView.frame)
+        let transactionViewModel = presenter.getTransactionListViewModel(index: section)
+        headerView.populate(transaction: transactionViewModel)
+        return headerView
+    }
+}
+
+extension DashboardViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

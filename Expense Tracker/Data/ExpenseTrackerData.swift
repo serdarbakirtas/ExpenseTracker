@@ -6,4 +6,6 @@
 //
 
 protocol ExpenseTrackerData {
+    // MARK: GET
+    func execute(completion: @escaping ([TransactionCategory]?, Error?) -> Void)
 }

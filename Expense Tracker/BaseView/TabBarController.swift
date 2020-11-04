@@ -30,7 +30,7 @@ class TabBarController: UITabBarController {
         let navigationController = UINavigationController()
         
         let chartVC = UIViewController()
-        let dashboardVC = UIViewController()
+        let dashboardVC = DashboardViewController()
         
         navigationController.viewControllers.append(dashboardVC)
         

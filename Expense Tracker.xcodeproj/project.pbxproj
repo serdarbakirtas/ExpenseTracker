@@ -22,6 +22,9 @@
 		9FB96C69255302D2000536E3 /* BaseViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C68255302D2000536E3 /* BaseViewPresenter.swift */; };
 		9FB96C6F255304F5000536E3 /* ExpenseTrackerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C6E255304F5000536E3 /* ExpenseTrackerData.swift */; };
 		9FB96C772553050A000536E3 /* ExpenseTrackerDataRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */; };
+		9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C7C2553072F000536E3 /* TransactionCategory.swift */; };
+		9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */; };
+		9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		9FB96C68255302D2000536E3 /* BaseViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewPresenter.swift; sourceTree = "<group>"; };
 		9FB96C6E255304F5000536E3 /* ExpenseTrackerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerData.swift; sourceTree = "<group>"; };
 		9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerDataRepo.swift; sourceTree = "<group>"; };
+		9FB96C7C2553072F000536E3 /* TransactionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCategory.swift; sourceTree = "<group>"; };
+		9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
+		9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,9 @@
 				9FB96C5F255302B6000536E3 /* Base */,
 				9FB96C43255301B6000536E3 /* BaseView */,
 				9FB96C6D255304E3000536E3 /* Data */,
+				9FB96C7B25530705000536E3 /* Model */,
 				9FB96C4C25530274000536E3 /* Views */,
+				9FB96C8425530765000536E3 /* ViewModel */,
 				9FB96C0D25530120000536E3 /* AppDelegate.swift */,
 				9FB96C0F25530120000536E3 /* SceneDelegate.swift */,
 				9FB96C1325530120000536E3 /* Main.storyboard */,
@@ -158,6 +166,7 @@
 			children = (
 				9FB96C4D25530289000536E3 /* DashboardViewController.swift */,
 				9FB96C5525530295000536E3 /* DashboardPresenter.swift */,
+				9FB96C8525530DA6000536E3 /* DashboardHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +188,22 @@
 				9FB96C762553050A000536E3 /* ExpenseTrackerDataRepo.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		9FB96C7B25530705000536E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FB96C7C2553072F000536E3 /* TransactionCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FB96C8425530765000536E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FB96C8D25530DBF000536E3 /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB96C69255302D2000536E3 /* BaseViewPresenter.swift in Sources */,
+				9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */,
 				9FB96C45255301C4000536E3 /* TabBarController.swift in Sources */,
+				9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */,
 				9FB96C5625530295000536E3 /* DashboardPresenter.swift in Sources */,
+				9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */,
 				9FB96C772553050A000536E3 /* ExpenseTrackerDataRepo.swift in Sources */,
 				9FB96C5B255302A8000536E3 /* BasePresenterView.swift in Sources */,
 				9FB96C6F255304F5000536E3 /* ExpenseTrackerData.swift in Sources */,
