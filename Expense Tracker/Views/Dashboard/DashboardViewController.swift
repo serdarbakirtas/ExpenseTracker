@@ -106,4 +106,22 @@ extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let accountType = AccoutType(rawValue: presenter.getTransactionListViewModel(index: indexPath.section).name ?? "")
+            switch accountType {
+            case .CASH:
+                ExpenseTrackerDataRepo.sharedInstance.transactionCash.remove(at: indexPath.row)
+            case .CREDIT_CARD:
+                ExpenseTrackerDataRepo.sharedInstance.transactionCrediatCard.remove(at: indexPath.row)
+            case .BANK_ACCOUNT:
+                ExpenseTrackerDataRepo.sharedInstance.transactionBankAccount.remove(at: indexPath.row)
+            case .none: break
+            }
+            
+            presenter.loadTransaction()
+            reloadTable()
+        }
+    }
 }

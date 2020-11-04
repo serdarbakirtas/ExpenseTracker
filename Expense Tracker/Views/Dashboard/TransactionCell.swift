@@ -70,6 +70,8 @@ class TransactionCell: UITableViewCell {
     func populate(transaction: Transaction) {
         if transaction.amount < 0 {
             amountLabel.textColor = .red
+        } else {
+            amountLabel.textColor = .green
         }
         nameLabel.text = transaction.category?.rawValue
         amountLabel.text = " \(transaction.amount)".toCurrency
