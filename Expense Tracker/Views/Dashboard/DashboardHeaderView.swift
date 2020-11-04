@@ -31,11 +31,19 @@ class DashboardHeaderView: UITableViewHeaderFooterView {
         return label
     }()
     
+    private let seperatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
         addSubview(nameLabel)
         addSubview(amountLabel)
+        addSubview(seperatorView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,6 +72,13 @@ class DashboardHeaderView: UITableViewHeaderFooterView {
             options: [],
             metrics: nil,
             views: views))
+        
+        NSLayoutConstraint.activate([
+            seperatorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -1),
+            seperatorView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0),
+            seperatorView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0),
+            seperatorView.heightAnchor.constraint(equalToConstant: 1),
+        ])
     }
     
     // MARK: FUNCTIONS

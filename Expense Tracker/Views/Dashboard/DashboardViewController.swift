@@ -110,6 +110,7 @@ extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             let accountType = AccoutType(rawValue: presenter.getTransactionListViewModel(index: indexPath.section).name ?? "")
+            // TODO: Refactor needed
             switch accountType {
             case .CASH:
                 ExpenseTrackerDataRepo.sharedInstance.transactionCash.remove(at: indexPath.row)
