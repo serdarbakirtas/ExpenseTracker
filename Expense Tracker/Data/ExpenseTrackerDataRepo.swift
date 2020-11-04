@@ -32,7 +32,7 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
         completion(transactionCategoryList, nil)
     }
     
-    func addTransactionCashe(transaction: Transaction) {
+    func addTransactionCash(transaction: Transaction) {
         transactionCash.append(transaction)
     }
     

@@ -71,7 +71,7 @@ class TransactionCell: UITableViewCell {
         if transaction.amount < 0 {
             amountLabel.textColor = .red
         }
-        nameLabel.text = transaction.category.rawValue
+        nameLabel.text = transaction.category?.rawValue
         amountLabel.text = " \(transaction.amount)".toCurrency
     }
 }

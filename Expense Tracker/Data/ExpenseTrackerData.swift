@@ -10,7 +10,7 @@ protocol ExpenseTrackerData {
     func getTransactions(completion: @escaping ([TransactionCategory]?, Error?) -> Void)
     
     // MARK: POST
-    func addTransactionCashe(transaction: Transaction)
+    func addTransactionCash(transaction: Transaction)
     func addTransactionCrediatCard(transaction: Transaction)
     func addTransactionBankAccount(transaction: Transaction)
 }

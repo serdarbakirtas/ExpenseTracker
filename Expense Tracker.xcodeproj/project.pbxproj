@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9F033A772553359B006C1FF3 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A762553359B006C1FF3 /* ChartViewController.swift */; };
+		9F033A8425533770006C1FF3 /* BaseViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A8325533770006C1FF3 /* BaseViewMock.swift */; };
+		9F033A8C255337B1006C1FF3 /* BaseViewPresenterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A8B255337B1006C1FF3 /* BaseViewPresenterUnitTest.swift */; };
+		9F033A91255337EE006C1FF3 /* ExpenseTrackerAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A90255337EE006C1FF3 /* ExpenseTrackerAPIMock.swift */; };
+		9F033A9625533996006C1FF3 /* AddTransactionPresenterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A9525533996006C1FF3 /* AddTransactionPresenterUnitTest.swift */; };
+		9F033A9B25533A20006C1FF3 /* AddTransactionViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033A9A25533A20006C1FF3 /* AddTransactionViewMock.swift */; };
+		9F033AA625533AAB006C1FF3 /* DashboardViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033AA525533AAB006C1FF3 /* DashboardViewMock.swift */; };
+		9F033AAE25533AFA006C1FF3 /* DashboardPresenterUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F033AAD25533AFA006C1FF3 /* DashboardPresenterUnitTest.swift */; };
 		9FB96C0E25530120000536E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96C0D25530120000536E3 /* AppDelegate.swift */; };
 		9FB96C1525530120000536E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1325530120000536E3 /* Main.storyboard */; };
 		9FB96C1725530121000536E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB96C1625530121000536E3 /* Assets.xcassets */; };
@@ -54,6 +61,13 @@
 
 /* Begin PBXFileReference section */
 		9F033A762553359B006C1FF3 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		9F033A8325533770006C1FF3 /* BaseViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewMock.swift; sourceTree = "<group>"; };
+		9F033A8B255337B1006C1FF3 /* BaseViewPresenterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewPresenterUnitTest.swift; sourceTree = "<group>"; };
+		9F033A90255337EE006C1FF3 /* ExpenseTrackerAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerAPIMock.swift; sourceTree = "<group>"; };
+		9F033A9525533996006C1FF3 /* AddTransactionPresenterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionPresenterUnitTest.swift; sourceTree = "<group>"; };
+		9F033A9A25533A20006C1FF3 /* AddTransactionViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewMock.swift; sourceTree = "<group>"; };
+		9F033AA525533AAB006C1FF3 /* DashboardViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewMock.swift; sourceTree = "<group>"; };
+		9F033AAD25533AFA006C1FF3 /* DashboardPresenterUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterUnitTest.swift; sourceTree = "<group>"; };
 		9FB96C0A25530120000536E3 /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB96C0D25530120000536E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB96C1425530120000536E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +134,27 @@
 			path = Chart;
 			sourceTree = "<group>";
 		};
+		9F033A8125533757006C1FF3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9F033A9A25533A20006C1FF3 /* AddTransactionViewMock.swift */,
+				9F033A8325533770006C1FF3 /* BaseViewMock.swift */,
+				9F033AA525533AAB006C1FF3 /* DashboardViewMock.swift */,
+				9F033A90255337EE006C1FF3 /* ExpenseTrackerAPIMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9F033A822553375E006C1FF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F033A8B255337B1006C1FF3 /* BaseViewPresenterUnitTest.swift */,
+				9F033A9525533996006C1FF3 /* AddTransactionPresenterUnitTest.swift */,
+				9F033AAD25533AFA006C1FF3 /* DashboardPresenterUnitTest.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9FB96C0125530120000536E3 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +196,8 @@
 		9FB96C2325530121000536E3 /* Expense TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				9F033A8125533757006C1FF3 /* Mocks */,
+				9F033A822553375E006C1FF3 /* Views */,
 				9FB96C2425530121000536E3 /* Expense_TrackerTests.swift */,
 				9FB96C2625530121000536E3 /* Info.plist */,
 			);
@@ -412,7 +449,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F033A8C255337B1006C1FF3 /* BaseViewPresenterUnitTest.swift in Sources */,
 				9FB96C2525530121000536E3 /* Expense_TrackerTests.swift in Sources */,
+				9F033A9625533996006C1FF3 /* AddTransactionPresenterUnitTest.swift in Sources */,
+				9F033A91255337EE006C1FF3 /* ExpenseTrackerAPIMock.swift in Sources */,
+				9F033A9B25533A20006C1FF3 /* AddTransactionViewMock.swift in Sources */,
+				9F033AA625533AAB006C1FF3 /* DashboardViewMock.swift in Sources */,
+				9F033AAE25533AFA006C1FF3 /* DashboardPresenterUnitTest.swift in Sources */,
+				9F033A8425533770006C1FF3 /* BaseViewMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

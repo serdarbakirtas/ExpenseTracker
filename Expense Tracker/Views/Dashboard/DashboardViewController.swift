@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol OffersView: BaseView {
+protocol DashboardView: BaseView {
     func reloadTable()
 }
 
@@ -67,7 +67,7 @@ class DashboardViewController: BaseViewController {
     }
 }
 
-extension DashboardViewController: OffersView {
+extension DashboardViewController: DashboardView {
     
     func reloadTable() {
         transactionTableView.reloadData()

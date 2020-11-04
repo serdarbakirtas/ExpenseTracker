@@ -12,7 +12,7 @@ struct TransactionCategory {
 
 struct Transaction {
     let amount: Double
-    let category: Category
+    let category: Category?
 }
 
 enum Category: String {

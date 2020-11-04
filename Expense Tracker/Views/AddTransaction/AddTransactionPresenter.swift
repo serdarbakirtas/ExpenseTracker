@@ -24,7 +24,7 @@ class AddTransactionPresenter<T: AddTransactionView>: BasePresenter<T> {
             
             switch accountType {
             case .CASH:
-                dataInstance.addTransactionCashe(transaction: transaction)
+                dataInstance.addTransactionCash(transaction: transaction)
             case .CREDIT_CARD:
                 dataInstance.addTransactionCrediatCard(transaction: transaction)
             case .BANK_ACCOUNT:

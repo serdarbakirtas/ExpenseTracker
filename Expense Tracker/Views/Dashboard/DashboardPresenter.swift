@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DashboardPresenter<T: OffersView>: BasePresenter<T> {
+class DashboardPresenter<T: DashboardView>: BasePresenter<T> {
     
     var transactions: [TransactionCategory] = []
     
