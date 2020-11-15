@@ -39,4 +39,11 @@ class DashboardPresenterUnitTest: XCTestCase {
         XCTAssertEqual(presenter.getTransactionListViewModel(index: 0).amount,
                        dataMock.getTransactionLisViewModel().amount)
     }
+    
+    func testRemovingTransaction() {
+        presenter.transactions.append(dataMock.getTransactions())
+        presenter.removeTransaction(indexPath: IndexPath(row: 0, section: 0))
+        
+        XCTAssert(dataMock.isTansactionRemoveCashCalled)
+    }
 }

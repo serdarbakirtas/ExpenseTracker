@@ -18,6 +18,7 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
     
     init() {}
     
+    // MARK: GET
     func getTransactions(completion: @escaping ([TransactionCategory]?, Error?) -> Void) {
         var transactionCategoryList = [TransactionCategory]()
         
@@ -32,6 +33,7 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
         completion(transactionCategoryList, nil)
     }
     
+    // MARK: POST
     func addTransactionCash(transaction: Transaction) {
         transactionCash.append(transaction)
     }
@@ -42,5 +44,18 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
     
     func addTransactionBankAccount(transaction: Transaction) {
         transactionBankAccount.append(transaction)
+    }
+    
+    // MARK: DELETE
+    func removeTransactionCash(row: Int) {
+        transactionCash.remove(at: row)
+    }
+    
+    func removeTransactionCrediatCard(row: Int) {
+        transactionCrediatCard.remove(at: row)
+    }
+    
+    func removeTransactionBankAccount(row: Int) {
+        transactionBankAccount.remove(at: row)
     }
 }

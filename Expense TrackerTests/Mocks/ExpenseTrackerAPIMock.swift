@@ -14,6 +14,9 @@ class ExpenseTrackerDataMock: ExpenseTrackerData {
     var isTansactionCashCalled = false
     var isTransactionCreditCardCalled = false
     var isTransactionBankAccountCalled = false
+    var isTansactionRemoveCashCalled = false
+    var isTransactionRemoveCreditCardCalled = false
+    var isTransactionRemoveBankAccountCalled = false
     
     init() {}
     
@@ -34,7 +37,7 @@ class ExpenseTrackerDataMock: ExpenseTrackerData {
     }
     
     func createTransactionObject() -> TransactionCategory {
-        return TransactionCategory(name: "",
+        return TransactionCategory(name: "Cash",
                                    transactions: [Transaction(amount: 20.0,
                                                               category: Category(rawValue: "Taxes"))])
     }
@@ -46,5 +49,17 @@ class ExpenseTrackerDataMock: ExpenseTrackerData {
     
     func getTransactionLisViewModel() -> TransactionListViewModel {
         return TransactionListViewModel(from: createTransactionObject())
+    }
+    
+    func removeTransactionCash(row: Int) {
+        isTansactionRemoveCashCalled = true
+    }
+    
+    func removeTransactionCrediatCard(row: Int) {
+        isTransactionRemoveCreditCardCalled = true
+    }
+    
+    func removeTransactionBankAccount(row: Int) {
+        isTransactionRemoveBankAccountCalled = true
     }
 }

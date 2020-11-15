@@ -29,6 +29,19 @@ class DashboardPresenter<T: DashboardView>: BasePresenter<T> {
         return TransactionListViewModel(from: transaction)
     }
     
+    func removeTransaction(indexPath: IndexPath) {
+        let accountType = AccoutType(rawValue: getTransactionListViewModel(index: indexPath.section).name ?? "")
+        switch accountType {
+        case .CASH:
+            dataInstance.removeTransactionCash(row: indexPath.row)
+        case .CREDIT_CARD:
+            dataInstance.removeTransactionCrediatCard(row: indexPath.row)
+        case .BANK_ACCOUNT:
+            dataInstance.removeTransactionBankAccount(row: indexPath.row)
+        case .none: break
+        }
+    }
+    
     // MARK: DATA CALLS
     func loadTransaction() {
         dataInstance.getTransactions {[unowned self] (transactions, error) in

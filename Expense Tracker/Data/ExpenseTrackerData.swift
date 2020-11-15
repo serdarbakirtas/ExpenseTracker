@@ -13,4 +13,9 @@ protocol ExpenseTrackerData {
     func addTransactionCash(transaction: Transaction)
     func addTransactionCrediatCard(transaction: Transaction)
     func addTransactionBankAccount(transaction: Transaction)
+    
+    // MARK: DELETE
+    func removeTransactionCash(row: Int)
+    func removeTransactionCrediatCard(row: Int)
+    func removeTransactionBankAccount(row: Int)
 }
