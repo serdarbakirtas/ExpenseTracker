@@ -24,7 +24,7 @@ class AddTransactionLayoutView: UIView {
     
     // MARK: UI
     var transactionSegmentControl: UISegmentedControl = {
-        let segmentControl = UISegmentedControl(items: [BalanceType.INCOME.rawValue, BalanceType.EXPENSE.rawValue])
+        let segmentControl = UISegmentedControl(items: [BalanceType.INCOME.description, BalanceType.EXPENSE.description])
         segmentControl.selectedSegmentIndex = 0
         segmentControl.translatesAutoresizingMaskIntoConstraints = false
         segmentControl.backgroundColor = .white

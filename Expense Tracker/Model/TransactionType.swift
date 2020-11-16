@@ -11,9 +11,9 @@ enum TransactionType: CaseIterable {
     public var category: [String] {
         switch self {
         case .TRANSACTION:
-            return [AccoutType.CASH.rawValue,
-                    AccoutType.CREDIT_CARD.rawValue,
-                    AccoutType.BANK_ACCOUNT.rawValue]
+            return [AccoutType.CASH.description,
+                    AccoutType.CREDIT_CARD.description,
+                    AccoutType.BANK_ACCOUNT.description]
         }
     }
 }
@@ -34,8 +34,19 @@ extension AccoutType {
     }
 }
 
-enum AccoutType: String {
+enum AccoutType: String, CustomStringConvertible {
     case CASH = "Cash"
     case CREDIT_CARD = "Credit Card"
     case BANK_ACCOUNT = "Bank Account"
+    
+    public var description: String {
+        switch self {
+        case .CASH:
+            return "Cash"
+        case .CREDIT_CARD:
+            return "Credit Card"
+        case .BANK_ACCOUNT:
+            return "Bank Account"
+        }
+    }
 }

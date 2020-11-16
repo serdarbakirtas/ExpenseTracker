@@ -46,14 +46,10 @@ class DashboardPresenter<T: DashboardView>: BasePresenter<T> {
     func loadTransaction() {
         dataInstance.getTransactions {[unowned self] (transactions, error) in
             if let error = error {
-                DispatchQueue.main.async {
-                    self.interpretError(title: "Loading Error", error: error)
-                }
+                self.interpretError(title: "Loading Error", error: error)
             } else {
                 guard let transactions = transactions else {
-                    DispatchQueue.main.async {
-                        view?.showAlert(title: "No Transactions Available", message: nil, actions: nil)
-                    }
+                    view?.showAlert(title: "No Transactions Available", message: nil, actions: nil)
                     return
                 }
                 self.transactions = transactions

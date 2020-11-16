@@ -73,7 +73,7 @@ class TransactionCell: UITableViewCell {
         } else {
             amountLabel.textColor = .green
         }
-        nameLabel.text = transaction.category?.rawValue
+        nameLabel.text = transaction.category?.description
         amountLabel.text = " \(transaction.amount)".toCurrency
     }
 }
