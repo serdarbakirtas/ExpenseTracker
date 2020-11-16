@@ -63,7 +63,7 @@ class DashboardViewController: BaseViewController {
     // MARK: ACTIONS
     @objc private func onTapAddTransaction() {
         let addTransactionVC = AddTransactionViewControlller()
-        presentVC(viewController: addTransactionVC)
+        presentNavigationVC(viewController: addTransactionVC)
     }
 }
 

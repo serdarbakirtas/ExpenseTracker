@@ -40,6 +40,7 @@
 		9FB96CBE25531C9C000536E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CBD25531C9C000536E3 /* TransactionCell.swift */; };
 		9FB96CCF255323EA000536E3 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CCE255323EA000536E3 /* TransactionType.swift */; };
 		9FB96CD425532471000536E3 /* BalanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB96CD325532471000536E3 /* BalanceType.swift */; };
+		9FBEDAD0256314E40026A47A /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEDACF256314E40026A47A /* DataError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		9FB96CBD25531C9C000536E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		9FB96CCE255323EA000536E3 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		9FB96CD325532471000536E3 /* BalanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceType.swift; sourceTree = "<group>"; };
+		9FBEDACF256314E40026A47A /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				9FB96C7C2553072F000536E3 /* TransactionCategory.swift */,
 				9FB96CCE255323EA000536E3 /* TransactionType.swift */,
 				9FB96CD325532471000536E3 /* BalanceType.swift */,
+				9FBEDACF256314E40026A47A /* DataError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				9FB96C8E25530DBF000536E3 /* TransactionListViewModel.swift in Sources */,
 				9FB96C45255301C4000536E3 /* TabBarController.swift in Sources */,
 				9FB96C7D2553072F000536E3 /* TransactionCategory.swift in Sources */,
+				9FBEDAD0256314E40026A47A /* DataError.swift in Sources */,
 				9F033A772553359B006C1FF3 /* ChartViewController.swift in Sources */,
 				9FB96C5625530295000536E3 /* DashboardPresenter.swift in Sources */,
 				9FB96C8625530DA6000536E3 /* DashboardHeaderView.swift in Sources */,

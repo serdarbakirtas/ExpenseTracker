@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
         showFullScreenActivityIndicator(isShown: false)
     }
     
-    func presentVC(viewController: UIViewController) {
+    func presentNavigationVC(viewController: UIViewController) {
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.navigationBar.isTranslucent = false
@@ -52,6 +52,17 @@ class BaseViewController: UIViewController {
             }
         } else {
             navCont.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    func presentVC(viewController: UIViewController) {
+        viewController.modalPresentationStyle = .fullScreen
+        if let presentedVC = self.presentedViewController {
+            presentedVC.dismiss(animated: true) {
+                self.present(viewController, animated: true)
+            }
+        } else {
+            self.present(viewController, animated: true)
         }
     }
 }

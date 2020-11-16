@@ -31,6 +31,9 @@ class ExpenseTrackerDataRepo: ExpenseTrackerData {
         transactionCategoryList.append(transactioBankAccount)
         
         completion(transactionCategoryList, nil)
+        
+        // TODO: Check error view
+//        completion(nil, CustomError(title: "", description: "", code: 404))
     }
     
     // MARK: POST
