@@ -36,10 +36,28 @@ class AddTransactionPresenterUnitTest: XCTestCase {
         XCTAssertEqual(presenter.getAmount(amount: "", balanceType: .INCOME), 0.0)
     }
     
-    func testAddingTransactionAddsCash() {
+    func testAddingCashAddsMockTransaction() {
         dataMock.addTransactionCash(transaction: Transaction(amount: 20.0, category:  Category(rawValue: "Taxes")))
         
         XCTAssert(dataMock.isTansactionCashCalled)
+    }
+    
+    func testAddingCashAddsTransaction()  {
+        presenter.addTransaction(amount: "250", category: "Taxes", account: "Cash", balanceType: .EXPENSE)
+        
+        XCTAssert(dataMock.isTansactionCashCalled)
+    }
+    
+    func testAddingCreditCardAddsTransaction()  {
+        presenter.addTransaction(amount: "250", category: "Taxes", account: "Credit Card", balanceType: .INCOME)
+        
+        XCTAssert(dataMock.isTransactionCreditCardCalled)
+    }
+    
+    func testAddingBankAccountAddsTransaction()  {
+        presenter.addTransaction(amount: "250", category: "Taxes", account: "Bank Account", balanceType: .EXPENSE)
+        
+        XCTAssert(dataMock.isTransactionBankAccountCalled)
     }
     
     func testAddingTransactionAddsCrediatCard() {
