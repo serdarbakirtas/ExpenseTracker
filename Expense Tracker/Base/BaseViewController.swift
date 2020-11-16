@@ -11,10 +11,6 @@ protocol BaseView: BasePresenterView {
     func showFullScreenActivityIndicator(isShown: Bool)
 }
 
-protocol PermissionListener where Self: UIViewController {
-    func onPermissionsChanged()
-}
-
 class BaseViewController: UIViewController {
     
     private var presenter: BaseViewPresenter<BaseViewController>!
